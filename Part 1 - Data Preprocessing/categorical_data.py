@@ -8,7 +8,7 @@ import pandas as pd
 # Importing the dataset
 dataset = pd.read_csv('Data.csv')
 X = dataset.iloc[:, :-1].values
-y = dataset.iloc[:, 3].values
+Y = dataset.iloc[:, 3].values
 
 # Taking care of missing data
 from sklearn.preprocessing import Imputer
@@ -24,5 +24,5 @@ X[:, 0] = labelencoder_X.fit_transform(X[:, 0])
 onehotencoder = OneHotEncoder(categorical_features = [0])
 X = onehotencoder.fit_transform(X).toarray()
 # Encoding the Dependent Variable
-labelencoder_y = LabelEncoder()
-y = labelencoder_y.fit_transform(y)
+labelencoder_Y = LabelEncoder()
+Y = labelencoder_Y.fit_transform(Y)
