@@ -24,5 +24,10 @@ X[:, 0] = labelencoder_X.fit_transform(X[:, 0])
 onehotencoder = OneHotEncoder(categorical_features = [0])
 X = onehotencoder.fit_transform(X).toarray()
 # Encoding the Dependent Variable
+<<<<<<< HEAD
 labelencoder_Y = LabelEncoder()
 Y = labelencoder_Y.fit_transform(Y)
+=======
+labelencoder_y = LabelEncoder()
+Y = labelencoder_Y.fit_transform(Y)
+>>>>>>> e99130753b7d84c918e4dc7035eb298c9f84d75b
